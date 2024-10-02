@@ -79,21 +79,20 @@
   }
 }
 /* button styles */
-.button-outline {
-    background-color: transparent;
-    color: #7A1CAC; /* Bright Purple */
-    border: 2px solid #7A1CAC; /* Border matching the color */
-    border-radius: 25px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
+
+.btn-outline {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
 }
 
-.button-outline:hover {
-    background-color: #7A1CAC; /* Fill on hover */
-    color: #EBD3F8; /* Light Lavender */
+.btn-outline:hover {
+  background-color: var(--accent-color);
+  color: var(--background-color);
 }
 /* Responsive Styles */
 @media screen and (max-width: 768px) {

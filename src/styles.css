@@ -12,28 +12,28 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  position: relative;
+  min-height: 100vh; /* Ensures the body fills the full height of the viewport */
 }
-
-
 
 /* Glowing Lines Background */
 .glowing-lines {
-  position: absolute;
+  position: fixed; /* Use fixed to keep it in view */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
-  overflow: hidden;
+  z-index: 0; /* Lower z-index to stay behind other elements */
+  pointer-events: none; /* Makes the glowing lines non-interactable */
 }
 
 .line {
   position: absolute;
   width: 2px;
-  height: 100vh;
+  height: 200%; /* Extended height to cover even while scrolling */
   background: rgba(186, 134, 252, 0.3);
   animation: moveLine 8s linear infinite;
   box-shadow: 0px 0px 15px rgba(186, 134, 252, 0.8), 0 0 25px rgba(186, 134, 252, 0.6), 0 0 50px rgba(186, 134, 252, 0.3);
@@ -56,3 +56,39 @@ body {
   }
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  .btn {
+    padding: 6px 12px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+}
