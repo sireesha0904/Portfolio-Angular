@@ -78,8 +78,23 @@
     text-shadow: 0 0 20px rgba(106, 17, 203, 0.7), 0 0 30px rgba(37, 117, 252, 0.5), 0 0 40px rgba(106, 17, 203, 0.3);
   }
 }
+/* button styles */
+.button-outline {
+    background-color: transparent;
+    color: #7A1CAC; /* Bright Purple */
+    border: 2px solid #7A1CAC; /* Border matching the color */
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
 
-
+.button-outline:hover {
+    background-color: #7A1CAC; /* Fill on hover */
+    color: #EBD3F8; /* Light Lavender */
+}
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
   .main-heading {
