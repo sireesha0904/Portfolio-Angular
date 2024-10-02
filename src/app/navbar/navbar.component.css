@@ -26,15 +26,16 @@
 }
 
 .navbar-brand {
-  font-size: 24px;
+  font-size: 35px;
   font-weight: bold;
-  color: #ffffff;
+  color: #bb86fc;
   text-decoration: none;
   transition: color 0.3s;
+  font-family: 'Brush Script MT', cursive;
 }
 
 .navbar-brand:hover {
-  color: #bb86fc; /* Light Purple on hover */
+  color: #9138ff; /* Light Purple on hover */
 }
 
 .navbar-menu {
