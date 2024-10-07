@@ -1,0 +1,83 @@
+.projects-section {
+  padding: 4rem 2rem;
+  background-color: var(--background-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1; /* Ensures content is above the glowing lines */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-item {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.project-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-info h3 {
+  font-size: 1.75rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.75rem;
+}
+
+.project-info p {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links a {
+  text-decoration: none;
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.project-links a:hover {
+  background-color: var(--button-hover-color);
+}
+
+.project-links a i {
+  margin-right: 0.5rem;
+}
