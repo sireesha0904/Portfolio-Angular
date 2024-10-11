@@ -18,7 +18,9 @@ export class ContactComponent {
 
   constructor(private http: HttpClient) {}
 
-  sendEmail() {
+  sendEmail(event: Event) {
+    event.preventDefault(); // Prevent default form submission
+
     const emailPayload = {
       service_id: 'service_ofybngi', // Your Service ID
       template_id: 'template_9ym3psg', // Your Template ID
