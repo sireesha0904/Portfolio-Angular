@@ -1,1 +1,31 @@
-<p>contact works!</p>
+<div class="contact-container">
+  <h1>Contact Me</h1>
+
+  <div class="contact-details">
+    <p><strong>Address:</strong> Your Address Here</p>
+    <p><strong>Email:</strong> modisireesha09&#64;gmail.com</p>
+    <p><strong>Phone:</strong> Your Phone Number Here</p>
+  </div>
+
+  <div class="contact-form">
+    <form (submit)="sendEmail()">
+      <div class="form-group">
+        <input type="text" placeholder="Your Name" [(ngModel)]="contactData.name" name="name" required />
+      </div>
+
+      <div class="form-group">
+        <input type="email" placeholder="Your Email" [(ngModel)]="contactData.email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <input type="text" placeholder="Subject" [(ngModel)]="contactData.subject" name="subject" required />
+      </div>
+
+      <div class="form-group">
+        <textarea placeholder="Message" [(ngModel)]="contactData.message" name="message" required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Send Message</button>
+      <p class="response-message">{{ responseMessage }}</p>
+    </form>
+  </div>
