@@ -1,31 +1,47 @@
 <div class="contact-container">
-  <h1>Contact Me</h1>
-
-  <div class="contact-details">
-    <p><strong>Address:</strong> Your Address Here</p>
-    <p><strong>Email:</strong> modisireesha09&#64;gmail.com</p>
-    <p><strong>Phone:</strong> Your Phone Number Here</p>
-  </div>
-
-  <div class="contact-form">
-    <form (submit)="sendEmail()">
+  <h2 class="contact-title">
+    <i class="fas fa-address-book"></i> Contact Us
+  </h2>
+  <div class="contact-content">
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Address: Odisha, Uppalada 761211</p>
+      <p><i class="fas fa-envelope"></i> Email: modisireesha09&#64;gmail.com</p>
+      <p><i class="fas fa-phone"></i> Phone: 8984993800</p>
+    </div>
+    <form class="contact-form">
       <div class="form-group">
-        <input type="text" placeholder="Your Name" [(ngModel)]="contactData.name" name="name" required />
+        <label for="name" class="label">Name</label>
+        <div class="input-wrapper">
+          <i class="fas fa-user input-icon"></i>
+          <input type="text" id="name" placeholder="Your Name" required />
+        </div>
       </div>
-
       <div class="form-group">
-        <input type="email" placeholder="Your Email" [(ngModel)]="contactData.email" name="email" required />
+        <label for="email" class="label">Email</label>
+        <div class="input-wrapper">
+          <i class="fas fa-envelope input-icon"></i>
+          <input type="email" id="email" placeholder="Your Email" required />
+        </div>
       </div>
-
       <div class="form-group">
-        <input type="text" placeholder="Subject" [(ngModel)]="contactData.subject" name="subject" required />
+        <label for="subject" class="label">Subject</label>
+        <div class="input-wrapper">
+          <i class="fas fa-tag input-icon"></i>
+          <input type="text" id="subject" placeholder="Subject" required />
+        </div>
       </div>
-
       <div class="form-group">
-        <textarea placeholder="Message" [(ngModel)]="contactData.message" name="message" required></textarea>
+        <label for="message" class="label">Message</label>
+        <div class="input-wrapper">
+          <i class="fas fa-comment input-icon"></i>
+          <textarea id="message" placeholder="Your Message" required></textarea>
+        </div>
       </div>
-
-      <button type="submit" class="btn">Send Message</button>
+      <button type="submit" class="btn">
+        <i class="fas fa-paper-plane"></i> Send
+      </button>
       <p class="response-message">{{ responseMessage }}</p>
     </form>
   </div>
+</div>

@@ -32,17 +32,25 @@ export class ContactComponent {
     };
 
     this.http
-      .post('https://api.emailjs.com/api/v1.0/email/send', emailPayload)
+      .post('https://api.emailjs.com/api/v1.0/email/send', emailPayload, {
+        responseType: 'text',
+      }) // Set responseType to 'text'
       .subscribe(
         (response) => {
+          console.log('Email sent successfully:', response); // Log success for debugging
           this.responseMessage =
             'Your message has been sent! Thank you for reaching out.';
           this.resetForm(); // Clear form after successful submission
         },
         (error) => {
           console.error('Email sending error:', error); // Log error for debugging
-          this.responseMessage =
-            'Oops! Something went wrong. Please try again later.';
+          if (error.error && error.error.message) {
+            // Check if there is a specific error message from the API
+            this.responseMessage = `Error: ${error.error.message}`;
+          } else {
+            this.responseMessage =
+              'Oops! Something went wrong. Please try again later.';
+          }
         }
       );
   }
