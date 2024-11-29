@@ -71,7 +71,7 @@ body {
 .contact-image {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  border-radius: 40%;
   margin: 0 auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
